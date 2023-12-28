@@ -15,11 +15,13 @@ import {
 function Footer() {
   return (
     <React.Fragment>
-      <div className=' text-light footer' >
+      <div className=' text-light footer'>
         <Container className='p-4'>
           <Row>
             <Col sm={7} className='justify-content-md-center text-center p-2 '>
-              <p style={{fontWeight:"900"}}>Get connected with us on our social networks:</p>
+              <p style={{ fontWeight: '900' }}>
+                Get connected with us on our social networks:
+              </p>
             </Col>
             <Col sm={1} className='justify-content-md-center text-light'>
               <Navbar.Text className='d-inline-block'>
@@ -30,42 +32,51 @@ function Footer() {
                   <FaFacebookF size={'18px'} color={'#ffffff'} />
                 </a>
               </Navbar.Text>
-              </Col>
-              <Col sm={1} className='justify-content-md-center text-light'>
+            </Col>
+            <Col sm={1} className='justify-content-md-center text-light'>
               <Navbar.Text className='d-inline-block'>
-                <a href='https://www.instagram.com/bookcornerinfo/' target='_blank'>
+                <a
+                  href='https://www.instagram.com/bookcornerinfo/'
+                  target='_blank'
+                >
                   <FaInstagram size={'18px'} color={'#ffffff'} />
                 </a>
               </Navbar.Text>
-              </Col>
-              <Col sm={1} className='justify-content-md-center text-light'>
+            </Col>
+            <Col sm={1} className='justify-content-md-center text-light'>
               <Navbar.Text className='d-inline-block'>
-                <a href='https://web.telegram.org/z/#-1649825626' target='_blank'>
+                <a
+                  href='https://web.telegram.org/z/#-1649825626'
+                  target='_blank'
+                >
                   <FaTelegramPlane size={'18px'} color={'#ffffff'} />
                 </a>
               </Navbar.Text>
-              </Col>
-              <Col sm={1} className='justify-content-md-center text-light'>
+            </Col>
+            <Col sm={1} className='justify-content-md-center text-light'>
               <Navbar.Text className='d-inline-block'>
                 <a href='https://twitter.com/infobookcorner' target='_blank'>
                   <FaTwitter size={'18px'} color={'#ffffff'} />
                 </a>
               </Navbar.Text>
-              </Col>
-              <Col sm={1} className='justify-content-md-center text-light'>
+            </Col>
+            <Col sm={1} className='justify-content-md-center text-light'>
               <Navbar.Text className='d-inline-block'>
-                <a href='https://www.facebook.com/groups/805126427516599' target='_blank'>
+                <a
+                  href='https://www.facebook.com/groups/805126427516599'
+                  target='_blank'
+                >
                   <FaFacebookMessenger size={'18px'} color={'#ffffff'} />
                 </a>
               </Navbar.Text>
             </Col>
           </Row>
-        <hr/>
+          <hr />
           <Row>
             <Col sm={3} className='text-start'>
               <ul className='list-unstyled  '>
                 <li className='py-2'>
-                  <h5 style={{color:"#fc7b03"}}>CONTACT</h5>
+                  <h5 style={{ color: '#fc7b03' }}>CONTACT</h5>
                 </li>
 
                 <li className='py-2'>
@@ -81,7 +92,10 @@ function Footer() {
                   &nbsp; +94776408775
                 </li>
                 <li className='py-2'>
-                  <a href='https://goo.gl/maps/CJXsuk9HqnJxRZBh6' target='_blank'>
+                  <a
+                    href='https://goo.gl/maps/CJXsuk9HqnJxRZBh6'
+                    target='_blank'
+                  >
                     <FaStore size={'16px'} color={'#ffffff'} />
                   </a>
                   &nbsp; Poonagary, Kilinochchi.
@@ -97,7 +111,7 @@ function Footer() {
             <Col sm={3} className='text-start'>
               <ul className='list-unstyled'>
                 <li className='py-2'>
-                  <h5 style={{color:"#fc7b03"}}>USEFUL LINKS</h5>
+                  <h5 style={{ color: '#fc7b03' }}>USEFUL LINKS</h5>
                 </li>
                 <li className='py-2'>Feedback</li>
                 <li className='py-2'>About Us</li>
@@ -108,7 +122,7 @@ function Footer() {
             <Col sm={3} className='text-start'>
               <ul className='list-unstyled'>
                 <li className='py-2'>
-                  <h5 style={{color:"#fc7b03"}}>MY ACCOUNT</h5>
+                  <h5 style={{ color: '#fc7b03' }}>MY ACCOUNT</h5>
                 </li>
                 <li className='py-2'>Profile</li>
                 <li className='py-2'>Cart</li>
@@ -119,7 +133,7 @@ function Footer() {
             <Col sm={3} className='text-start'>
               <ul className='list-unstyled'>
                 <li className='py-2'>
-                  <h5 style={{color:"#fc7b03"}}>SERVICES</h5>
+                  <h5 style={{ color: '#fc7b03' }}>SERVICES</h5>
                 </li>
                 <li className='py-2'>Doorstep Delivery</li>
                 <li className='py-2'>Online Payment</li>

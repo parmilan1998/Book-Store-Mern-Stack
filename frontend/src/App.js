@@ -22,14 +22,11 @@ import feedbackScreen from './screens/FeedbackScreen'
 import FeedbackListScreen from './screens/FeedbackListScreen'
 import FeedbackDetailScreen from './screens/FeedbackDetailScreen'
 
-
-
-
 const App = () => {
   return (
     <Router>
       <Header />
-      
+
       <main>
         <div>
           <Route path='/order/:id' component={OrderScreen} />
@@ -40,8 +37,8 @@ const App = () => {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/about' component={AboutUsScreen} />
-          <Route path='/feedback' component={feedbackScreen} />        
-          <Route path='/admin/feedback' component={FeedbackListScreen}  exact/>
+          <Route path='/feedback' component={feedbackScreen} />
+          <Route path='/admin/feedback' component={FeedbackListScreen} exact />
           <Route path='/admin/feedback/:id' component={FeedbackDetailScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
@@ -69,7 +66,11 @@ const App = () => {
           <Route path='/' component={HomeScreen} exact />
         </div>
       </main>
-      <br/><br/><br/><br/><br/>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </Router>
   )

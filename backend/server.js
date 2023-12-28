@@ -4,8 +4,7 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 import morgan from 'morgan'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
-import connectDB from './config/db.js'
-
+import mongoose from 'mongoose'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
@@ -14,24 +13,28 @@ import feedbackRoutes from './routes/feedbackRoutes.js'
 
 dotenv.config()
 
-connectDB()
-
+// Initialize the Express Application
 const app = express()
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 
+// Middleware
 app.use(express.json())
 
+// Routes
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
 app.use('/api/feedback', feedbackRoutes)
 app.use('/api/upload', uploadRoutes)
 
+// Paypal API
 app.get('/api/config/paypal', (req, res) =>
-  res.send('AaJM4Kxb8pCNgBg3vf0cgJMZvnxaRjYD85cl_MQdlXUPWf9dPuuTkcUj7Y6KRPbGU4-rw1MkQDLXjH1p')
+  res.send(
+    'AaJM4Kxb8pCNgBg3vf0cgJMZvnxaRjYD85cl_MQdlXUPWf9dPuuTkcUj7Y6KRPbGU4-rw1MkQDLXjH1p'
+  )
 )
 
 const __dirname = path.resolve()
@@ -49,14 +52,28 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
+// Error handler
 app.use(notFound)
 app.use(errorHandler)
 
+// Set the port
 const PORT = process.env.PORT || 5000
 
-app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+// MongoDB connection
+mongoose
+  .connect(
+    `MONGODB URL`,
+    {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useCreateIndex: true,
+    }
   )
-)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(
+        `DB connected succcesfully and listening port ${PORT}`.yellow.bold
+      )
+    })
+  })
+  .catch((error) => console.log(error))
